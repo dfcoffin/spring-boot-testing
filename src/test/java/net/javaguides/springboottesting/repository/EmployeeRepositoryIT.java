@@ -1,7 +1,7 @@
-package net.javaguides.springboottesting.integration;
+package net.javaguides.springboottesting.repository;
 
+import net.javaguides.springboottesting.integration.AbstractContainerBaseTest;
 import net.javaguides.springboottesting.model.Employee;
-import net.javaguides.springboottesting.repository.EmployeeRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-class EmployeeRepositoryIT {
+class EmployeeRepositoryIT extends AbstractContainerBaseTest {
 
     @Autowired
     private EmployeeRepository employeeRepository;

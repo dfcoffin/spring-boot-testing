@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public class EmployeeControllerIT extends AbstractContainerBaseTest {
+public class EmployeeControllerITest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -49,12 +49,6 @@ public class EmployeeControllerIT extends AbstractContainerBaseTest {
     @DisplayName("JUnit Integration test for create Employee REST API")
     @Test
     public void givenEmployeeObject_whenCreateEmployee_thenReturnSavedEmployee() throws Exception {
-
-        System.out.println("MySQL container username: " + MY_SQL_CONTAINER.getUsername());
-        System.out.println("MySQL container password: " + MY_SQL_CONTAINER.getPassword());
-        System.out.println("MySQL container database: " + MY_SQL_CONTAINER.getDatabaseName());
-        System.out.println("MySQL container URL: " + MY_SQL_CONTAINER.getJdbcUrl());
-
         // given - precondition or setup
         Employee employee = Employee.builder()
                 .firstName("Ramesh")
